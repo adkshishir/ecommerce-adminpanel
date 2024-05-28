@@ -42,10 +42,6 @@ export function Product() {
       }
     })();
   }, []);
-
-  useEffect(() => {
-    console.log(products);
-  }, [products]);
   // edit
   async function editproduct(slug: string) {
     router.push(`/admin/products/${slug}/edit`);

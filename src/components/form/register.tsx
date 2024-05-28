@@ -37,7 +37,6 @@ export function RegisterForm() {
       );
 
       const data = await response.json();
-      console.log(data);
       if (data.success) {
         toast.success('Register successfully');
         await setCookies('token', data.data.token);

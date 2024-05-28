@@ -37,9 +37,7 @@ export function Login() {
       );
 
       const data = await response.json();
-      console.log(data);
       if (data?.data?.token) {
-        console.log(data?.data?.token);
         setCookies('token', data.data.token);
         toast.success('Login successfully');
          router.push('/admin/dashboard')

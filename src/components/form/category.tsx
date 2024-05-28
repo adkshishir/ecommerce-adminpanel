@@ -47,7 +47,6 @@ export const CategoryForm = ({
     file && formData.append('image', file);
     formData.append('alt', alternativeText);
     formData.append('parentId', parentId);
-    console.log(await getCookies('token'));
     try {
       const response = await fetch(
         process.env.NEXT_PUBLIC_BASE_URL + `/api/categories/`,

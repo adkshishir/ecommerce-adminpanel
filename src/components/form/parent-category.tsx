@@ -45,7 +45,6 @@ export const ParentCategoryForm = ({
     formData.append('description', description);
     file && formData.append('image', file);
     formData.append('alt', alternativeText);
-    console.log(await getCookies('token'));
     try {
       const response = await fetch(
         process.env.NEXT_PUBLIC_BASE_URL + `/api/parent-categories/`,

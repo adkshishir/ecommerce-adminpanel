@@ -27,7 +27,6 @@ const page = (params: any) => {
           process.env.NEXT_PUBLIC_BASE_URL + `/api/categories/${slug}`
         );
         const data = await response.json();
-        console.log(data);
         if (data?.data?.id) {
           setName(data.data.name);
           setSlug(data.data.slug);
